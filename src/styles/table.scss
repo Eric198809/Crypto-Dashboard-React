@@ -177,11 +177,12 @@
     }
     .infos-container {
       display: grid;
-      grid-template-columns: 25px 22px 32px 1fr;
+      grid-template-columns: 30px 30px 3fr 1fr;
       height: 100%;
       align-items: center;
 
       > img {
+        
         height: 12px;
         display: block;
         margin-left: auto;
@@ -201,7 +202,7 @@
       .img {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
         img {
           object-fit: cover;

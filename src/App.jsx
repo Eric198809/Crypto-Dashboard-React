@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import HeaderInfos from './Components/HeaderInfos'
 import Table from './Components/Table'
 import axios from 'axios'
+import ToTop from './Components/ToTop'
 
 
 function App() {
@@ -14,6 +15,14 @@ useEffect(() => {
       
    }
 fetchData();
+
+window.addEventListener("scroll", ()=>{
+ if (window.scrollY > 145) {
+  document.querySelector(".table-header").classList.add("active")
+ } else{
+  document.querySelector(".table-header").classList.remove("active")
+ }
+})
    }, []);
 
   return (
@@ -22,6 +31,7 @@ fetchData();
       <HeaderInfos/>
     </header>
     <Table coinsData= {coinsData}/>
+    <ToTop/>
   </div>
   )
 }

@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PercentChange from "./PercentChange";
-import{data} from "../Api";
 import TableFilters from "./TableFilters";
 const HeaderInfos = () => {
   const [headerData, setHeaderData] = useState([]);
@@ -23,7 +22,7 @@ fetchData();
       <ul className="title">
         <li>
           <h1>
-            <img src="./assets/logo.png" alt="" /> Watch Tower
+           Watch Tower
           </h1>
         </li>
         <li>
